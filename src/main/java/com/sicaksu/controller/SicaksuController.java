@@ -24,12 +24,15 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import com.sicaksu.models.Event;
 import com.sicaksu.models.Profile;
 import com.sicaksu.models.User;
+import com.sicaksu.payload.LoginPayload;
 import com.sicaksu.repo.EventRepo;
 import com.sicaksu.repo.ProfileRepo;
 import com.sicaksu.repo.UserRepo;
 
 import jakarta.annotation.PostConstruct;
 
+
+//todo : add login function
 @RestController
 @RequestMapping("/sicaksu")
 public class SicaksuController {
@@ -62,6 +65,22 @@ public class SicaksuController {
 		logger.info("User created : " + user.toString());
 		
 		return ResponseEntity.ok(createdUser);
+	}
+	
+	//// new endpoints
+	// yeni bir user ve profil olusturur 
+	@PostMapping("/login")
+	public ResponseEntity<?> createUser(@RequestBody LoginPayload loginUser) {
+		
+		User loginedUser = userRepo.findByUsernameAndPassword(loginUser.getUsername(),loginUser.getPassword());
+        // check if there is a user with password and username
+		if(loginedUser == null) {
+			throw new CustomException("Username or password is wrong");
+		}
+		logger.info("Logged In : " + loginedUser.toString());
+		
+		return ResponseEntity.ok(loginedUser);
+//		return ResponseEntity.ok("helo");
 	}
 	
 	// tum profillerin listesini dondurur

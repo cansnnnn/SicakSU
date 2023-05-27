@@ -11,5 +11,7 @@ import com.sicaksu.models.User;
 @Repository
 public interface UserRepo extends MongoRepository<User, String>{
 	public User findByUsername(String username);
+	public User findByUsernameAndPassword(String username, String password);
+
 
 }
