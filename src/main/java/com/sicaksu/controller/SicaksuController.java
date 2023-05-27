@@ -180,16 +180,11 @@ public class SicaksuController {
 	    return ResponseEntity.ok().body("Deleted");
 	}
 	
-	
-	
-	
-	
 	// baglanti var mi kontrol etmek icin
 	@GetMapping("/hello")
 	public String Hello(){
 		return "HELLO";
 	}
-	
 	
 	////Errors
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
