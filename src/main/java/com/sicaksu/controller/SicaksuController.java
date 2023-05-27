@@ -80,7 +80,6 @@ public class SicaksuController {
 		logger.info("Logged In : " + loginedUser.toString());
 		
 		return ResponseEntity.ok(loginedUser);
-//		return ResponseEntity.ok("helo");
 	}
 	
 	// tum profillerin listesini dondurur
