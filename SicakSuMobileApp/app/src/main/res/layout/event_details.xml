@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/txtHeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/txtCreatedBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Created By"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#A6000000"
+        android:layout_marginTop="50dp" />
+
+
+
+    <TextView
+        android:id="@+id/txtJoinedPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joined People"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#A6000000"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/txtJoinCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Join Count"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#A6000000"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/txtLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#A6000000"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#A6000000"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:id="@+id/btnJoin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Join Event" />
+
+    <Button
+        android:id="@+id/btnLeave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leave Event" />
+
+</LinearLayout>

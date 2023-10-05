@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SicakSuMobileApp</string>
+
+    <string name="created_by">Created by: %s</string>
+    <string name="join_count">Join count: %d</string>
+    <string name="joined_people">Joined people: %s</string>
+    <string name="date">Date: %s</string>
+    <string name="limit">Limit: %d</string>
+
+</resources>
